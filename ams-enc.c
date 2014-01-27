@@ -73,7 +73,7 @@ EncObj encPos[NUM_ENC];
 
 #define AMS_ENC_ANGLE_REG   0xFE
 
-#define AMS_ENC_OFFSET_0 5758
+#define AMS_ENC_OFFSET_0 6312
 #define AMS_ENC_OFFSET_1 7706
 
 volatile unsigned char  state = AMS_ENC_IDLE;
@@ -124,7 +124,7 @@ void amsEncoderResetPos(void) {
     // initialize structure
     int i;
     for(i = 0; i< NUM_ENC; i++) {
-        //amsEncoderBlockingRead(i);    // get initial values w/o setting oticks
+        amsEncoderBlockingRead(i);    // get initial values w/o setting oticks
         //encPos[i].offset = encPos[i].pos; // initialize encoder
         encPos[i].calibPos = 0;
         encPos[i].oticks = 0;   // set revolution counter to 0
