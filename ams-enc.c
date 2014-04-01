@@ -73,8 +73,8 @@ EncObj encPos[NUM_ENC];
 
 #define AMS_ENC_ANGLE_REG   0xFE
 
-#define AMS_ENC_OFFSET_0 6312
-#define AMS_ENC_OFFSET_1 7706
+#define AMS_ENC_OFFSET_0 13571
+#define AMS_ENC_OFFSET_1 12467
 
 volatile unsigned char  state = AMS_ENC_IDLE;
 volatile unsigned char  encoder_number = 0;
